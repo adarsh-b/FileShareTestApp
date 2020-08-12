@@ -52,7 +52,7 @@ namespace FileShareTestApp
         private static async Task<ShareFileClient> PasswordAuthentication(SampleUser user, string clientId, string clientSecret)
         {
             // Initialize ShareFileClient.
-            var configuration = Configuration.Default();
+            var configuration = ShareFile.Api.Client.Configuration.Default();
             configuration.Logger = new DefaultLoggingProvider();
 
             var sfClient = new ShareFileClient(ShareFileBaseAPIUrl, configuration);
